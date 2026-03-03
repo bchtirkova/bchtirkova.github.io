@@ -27,8 +27,9 @@ author:
   name             : "Boriana Chtirkova"
   pronouns         : # example: "she/her"  
   bio              : "Postdoc"
+  princeton        : "https://www.princeton.edu"
   location         : "Princeton, NJ"
-  employer         : "Princeton University"
+  employer         : # Employer Name
   uri              : # URL
   email            : "chtirkova@princeton.edu" 
 

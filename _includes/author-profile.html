@@ -23,6 +23,18 @@
   <div class="author__urls-wrapper">
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
+      <!-- Princeton University icon -->
+      {% if author.princeton %}
+        <li>
+        <a href="{{ author.princeton }}" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Princeton_seal.svg"
+               alt="Princeton University"
+               style="height: 20px; width: auto; margin-right: 6px; vertical-align: middle;">
+          Princeton University
+        </a>
+        </li>
+      {% endif %}
+
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}
         <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</li>
