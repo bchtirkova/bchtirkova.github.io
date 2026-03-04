@@ -16,6 +16,8 @@
 
   <div class="author__content">
     <h3 class="author__name">{{ author.name }}</h3>
+    {% if author.cyrillic_name %}<p class="author__cyrillic_name">{{ author.cyrillic_name }}</p>{% endif %}
+    {% if author.pronounciation %}<p class="author__pronounciation">{{ author.pronounciation }}</p>{% endif %}
     {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
   </div>

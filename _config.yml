@@ -23,26 +23,28 @@ repository               : "bchtirkova/bchtirkova.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "IMG_20221119_114643e_square.jpg"
   name             : "Boriana Chtirkova"
+  cyrillic_name    : "Боряна Щиркова"
+  pronounciation   : "/bɔrˈjanɐ ˈʃtirkoˌvɐ/"
   pronouns         : # example: "she/her"  
-  bio              : "Postdoc"
-  princeton        : "https://www.princeton.edu"
-  location         : "Princeton, NJ"
+  bio              : # example: "Postdoc" 
+  princeton        : "https://geosciences.princeton.edu/people/boriana-chtirkova"
+  location         : # Location 
   employer         : # Employer Name
   uri              : # URL
   email            : "chtirkova@princeton.edu" 
 
   # Academic websites
   academia         : # URL
-  arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  arxiv            : "http://arxiv.org/a/chtirkova_b_1"
+  googlescholar    : "https://scholar.google.com/citations?user=ID5sqBkAAAAJ"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "https://orcid.org/yourorcidurl"
+  orcid            : "https://orcid.org/0000-0001-5743-8511"
   semantic         : # URL
   ssrn             : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : # URL
   researchgate     : # URL
   scopus           : # URL
   zotero           : # URL
@@ -52,7 +54,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : # Username 
   gitlab           : "mjade"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
@@ -99,7 +101,7 @@ breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : true
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false      #change to true to add link to talkmap on talks page
+talkmap_link             : true      #change to true to add link to talkmap on talks page
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -127,7 +129,7 @@ staticman:
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
+  hide                   : true     # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
 
 
@@ -229,7 +231,7 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
+  adventures:
     output: true
     permalink: /:collection/:path/
   talks:
@@ -264,8 +266,8 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
-      comments: true
+      share: false
+      comments: false
   # _publications
   - scope:
       path: ""
@@ -273,17 +275,17 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
-      comments: true
-  # _portfolio
+      share: false
+      comments: false
+  # _adventures
   - scope:
       path: ""
-      type: portfolio
+      type: adventures 
     values:
       layout: single
       author_profile: true
-      share: true
-      comment: true
+      share: false
+      comment: false
   # _talks
   - scope:
       path: ""
@@ -291,7 +293,7 @@ defaults:
     values:
       layout: talk
       author_profile: true
-      share: true
+      share: false
 
 
 # Sass/SCSS

@@ -11,12 +11,7 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Atmospheric and Climate sciences, 2023
-Thesis: Decadal-scale internal variability of the shortwave flux components within Earth's energy balance
-ETH Zurich, Switzerland
-
-* B.Sc. and M.Sc. Astrophysics, Meteorology and Geophysics
-Faculty of Physics, Sofia University ``St. Kliment Ohridski'', Bulgaria
+GitHub University
 
 Work experience
 ======

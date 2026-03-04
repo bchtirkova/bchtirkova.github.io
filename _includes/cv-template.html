@@ -30,12 +30,6 @@
       </div>
       {% endif %}
       
-      {% if cv.basics.phone %}
-      <div class="cv-contact-item">
-        <i class="fas fa-phone"></i> {{ cv.basics.phone }}
-      </div>
-      {% endif %}
-      
       {% if cv.basics.website %}
       <div class="cv-contact-item">
         <i class="fas fa-globe"></i> <a href="{{ cv.basics.website }}" target="_blank">{{ cv.basics.website }}</a>
@@ -89,6 +83,11 @@
             <strong>Courses:</strong> {{ education.courses | join: ", " }}
           </div>
           {% endif %}
+          {% if education.thesis %}
+          <div class="cv-item-detail">
+              Thesis: <a href="{{ education.url }}" target="_blank">{{ education.thesis }}</a>
+          </div>
+          {% endif %}
         </div>
       </li>
       {% endfor %}
@@ -139,6 +138,23 @@
           <li>{{ keyword }}</li>
           {% endfor %}
         </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if cv.models.size > 0 %}
+  <!-- Models -->
+  <div class="cv-section">
+    <h2>Models I have worked with</h2>
+    <div class="cv-models">
+      {% for model in cv.models %}
+      <div class="cv-model-category">
+          <h3>{{ model.name }}</h3> {{ model.description }}
+          {% if model.url %}
+            <a href="{{ model.url }}" target="_blank">[Source]</a>
+          {% endif %}
       </div>
       {% endfor %}
     </div>

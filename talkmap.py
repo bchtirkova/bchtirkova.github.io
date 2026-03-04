@@ -1,15 +1,19 @@
+# NOTE B: There is frontmatter and python-frontmatter that are different packages. You need the second one. Run through argo-venv
+# Edits _talks/talkmap; run from base
+
 # Leaflet cluster map of talk locations
 #
-# Run this from the _talks/ directory, which contains .md files of all your
+# The _talks/ directory contains .md files of all your
 # talks. This scrapes the location YAML field from each .md file, geolocates it
 # with geopy/Nominatim, and uses the getorg library to output data, HTML, and
 # Javascript for a standalone cluster map. This is functionally the same as the
-# #talkmap Jupyter notebook.
+# talkmap Jupyter notebook.
 import frontmatter
 import glob
 import getorg
 from geopy import Nominatim
 from geopy.exc import GeocoderTimedOut
+from pathlib import Path
 
 # Set the default timeout, in seconds
 TIMEOUT = 5
@@ -53,4 +57,17 @@ for file in g:
 
 # Save the map
 m = getorg.orgmap.create_map_obj()
-getorg.orgmap.output_html_cluster_map(location_dict, folder_name="talkmap", hashed_usernames=False)
+getorg.orgmap.output_html_cluster_map(location_dict, folder_name="_talks/talkmap", hashed_usernames=False)
+
+
+# Manually remove this text from map.html because someone hard-coded it in getorg.
+map_path = Path("_talks/talkmap") / "map.html"
+
+text_to_remove = (
+    "Mouse over a cluster to see the bounds of its children "
+    "and click a cluster to zoom to those bounds"
+)
+
+html = map_path.read_text(encoding="utf-8")
+html = html.replace(text_to_remove, "")
+map_path.write_text(html, encoding="utf-8")
