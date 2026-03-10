@@ -8,6 +8,7 @@
 # with geopy/Nominatim, and uses the getorg library to output data, HTML, and
 # Javascript for a standalone cluster map. This is functionally the same as the
 # talkmap Jupyter notebook.
+import time
 import frontmatter
 import glob
 import getorg
@@ -16,7 +17,7 @@ from geopy.exc import GeocoderTimedOut
 from pathlib import Path
 
 # Set the default timeout, in seconds
-TIMEOUT = 5
+TIMEOUT = 15
 
 # Collect the Markdown files
 g = glob.glob("_talks/*.md")
@@ -40,12 +41,15 @@ for file in g:
 
     # Prepare the description
     title = data['title'].strip()
-    venue = data['venue'].strip()
+    # B: I'm not filling in the venue part of the json. If ever included, edit here.
+    # venue = data['venue'].strip()
+    venue = ""
     location = data['location'].strip()
     description = f"{title}<br />{venue}; {location}"
 
     # Geocode the location and report the status
     try:
+        time.sleep(10)  # sleep 10 seconds to not get 429 too many requests
         location_dict[description] = geocoder.geocode(location, timeout=TIMEOUT)
         print(description, location_dict[description])
     except ValueError as ex:

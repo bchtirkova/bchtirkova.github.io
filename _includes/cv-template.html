@@ -85,7 +85,7 @@
           {% endif %}
           {% if education.thesis %}
           <div class="cv-item-detail">
-              Thesis: <a href="{{ education.url }}" target="_blank">{{ education.thesis }}</a>
+              Thesis: <a href="{{ education.doi }}" target="_blank">{{ education.thesis }}</a>
           </div>
           {% endif %}
         </div>
@@ -147,7 +147,7 @@
   {% if cv.models.size > 0 %}
   <!-- Models -->
   <div class="cv-section">
-    <h2>Models I have worked with</h2>
+    <h2>Models I like to work with</h2>
     <div class="cv-models">
       {% for model in cv.models %}
       <div class="cv-model-category">

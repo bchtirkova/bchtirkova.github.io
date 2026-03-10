@@ -39,7 +39,7 @@
       "endDate": "ongoing",
     },
     {
-      "company": "ETH Zurich",
+      "company": "ETH Zürich",
       "position": "PhD student and Postdoc",
       "summary": "",
       "highlights": ["Investigating climate variability and change in the shortwave radiative fluxes within Earth's atmosphere"],
@@ -57,7 +57,7 @@
   ],
   "education": [
     {
-      "institution": "ETH Zurich",
+      "institution": "ETH Zürich",
       "area": "PhD in Atmospheric and Climate Sciences",
       "thesis": "Decadal-scale internal variability of the shortwave flux components within Earth's energy balance",
       "doi": "https://doi.org/10.3929/ethz-b-000645865",
@@ -95,7 +95,7 @@
     },
     {
       "name": "2D isentropic",
-      "description": "A 2-dimensional isentropic model – the numerical model, constructed in the master's course Numerical Modelling of Weather and Climate at ETH Zurich"
+      "description": "A 2-dimensional isentropic model – the numerical model, constructed in the master's course Numerical Modelling of Weather and Climate at ETH Zürich"
     },
     {
       "name": "ecRAD",
