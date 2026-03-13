@@ -13,7 +13,7 @@ title                    : "Boriana Chtirkova"
 title_separator          : "-"
 name                     : &name "Boriana Chtirkova"
 description              : &description "Boriana Chtirkova's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : https://bchtirkova.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
+url                      : https://boriana.ch # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "bchtirkova/bchtirkova.github.io"
@@ -100,7 +100,7 @@ teaser                   :  # filename of teaser fallback teaser image placed in
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
+read_more                : "disabled" # if enabled, adds "Read more" links to excerpts; B: I do this manually in the html
 talkmap_link             : true       #change to true to add link to talkmap on talks page
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
