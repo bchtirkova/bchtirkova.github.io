@@ -2,7 +2,7 @@
 title: "Internal Variability of All-Sky and Clear-Sky Surface Solar Radiation on Decadal Timescales"
 collection: publications
 category: "shortwave"
-excerpt: "We explore all possible statistically insignificant trends of downwelling shortwave radiation for a given location that can occur due to internal variability given a Gaussian distribution and zero autocorrelation in time. <br/><img src='/images/pub_iv_gaussians.png' width='200'>"
+excerpt: "We explore all possible statistically insignificant trends of downwelling shortwave radiation for a given location that can occur due to internal variability given a Gaussian distribution and zero autocorrelation in time. <br/><img src='/images/pub_iv_gaussians.webp' width='200'>"
 date: 2022-06-14
 journal: "Journal of Geophysical Research: Atmospheres"
 authors: "B. Chtirkova, D. Folini, L. F. Correa and M. Wild"
@@ -21,7 +21,7 @@ of the time series: that the distribution of all values is Gaussian and that the
 in time. Based on our analysis, we can estimate the probability of an unforced trend (or unforced
 component contributing to a trend) for different spots on the planet. 
 
-<br/><img src='/images/pub_iv_gaussians.png'><br/>
+<br/><img src='/images/pub_iv_gaussians.webp'><br/>
 
 The figure shows the trends
 distribution over different N-year periods for Lindenberg, Germany. At this location, an unforced

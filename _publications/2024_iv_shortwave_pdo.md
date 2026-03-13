@@ -18,7 +18,7 @@ Nonhydrostatic Model (ICON-A) with prescribed sea surface temperatures in the No
 The simulations revealed that such a large scale perturbation in the sea surface temperatures leads to a global
 redistribution of clouds.
 
-<br/><img src='/images/pub_iv_obs.jpg'><br/>
+<br/><img src='/images/pub_iv_obs.webp'><br/>
 
 The figure shows time series of the historical evolution of the PDO index and spatially aggregated trends of surface solar radiation in Europe (<a href="https://doi.org/10.1002/2015JD023321">Sanchez-Lorenzo et al., 2015</a>), United States (<a href="https://doi.org/10.1029/2021JD036342">Augustine and Capotondi, 2015</a>) and Nandi, Fiji (<a href="https://doi.org/10.1029/2024JD041014">Correa et al., 2024</a>). The direction of trends (positive versus negative) relative to the PDO index corresponds with the prediction from the idealized simulations.
 
