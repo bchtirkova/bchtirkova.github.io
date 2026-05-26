@@ -14,7 +14,7 @@ We set off to gain a better understanding over the
 range of influence of internal variability over decadal-scale trends of surface solar radiation, a key
 energy budget variable. We performed a statistical analysis on unforced multi-century Coupled
 models intercomparison project – Phase 6 simulations (piControl), which do not include any natural
-(e.g., volcanoes) or anthropogenic (e.g., greenhouse gases and aerosols) forcing. We show that for
+(e.g. volcanoes) or anthropogenic (e.g. greenhouse gases and aerosols) forcing. We show that for
 surface solar radiation the distribution of all possible N-year trends can be analytically derived from
 the standard deviation of the underlying time series (σts). This results from two important properties
 of the time series: that the distribution of all values is Gaussian and that there is no autocorrelation
