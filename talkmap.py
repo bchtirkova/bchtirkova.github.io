@@ -64,14 +64,56 @@ m = getorg.orgmap.create_map_obj()
 getorg.orgmap.output_html_cluster_map(location_dict, folder_name="_talks/talkmap", hashed_usernames=False)
 
 
-# Manually remove this text from map.html because someone hard-coded it in getorg.
+# B: Overwrite getorg's map.html to use overpass.ch vector tiles (MapLibre style)
+# instead of the hard-coded Esri tiles. The markers still come from org-locations.js.
+OVERPASS_KEY = "ovp_OeUOgK1oOvpvA2ANf2oRDAzbPGtUlFi6"
+STYLE_URL = f"https://api.overpass.ch/v1/{OVERPASS_KEY}/maps/styles/marine.json?lang=en&hillshade=1"
+
 map_path = Path("_talks/talkmap") / "map.html"
 
-text_to_remove = (
-    "Mouse over a cluster to see the bounds of its children "
-    "and click a cluster to zoom to those bounds"
-)
+html = f"""<!DOCTYPE html>
+<html>
+<head>
+	<title>Talk map</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-html = map_path.read_text(encoding="utf-8")
-html = html.replace(text_to_remove, "")
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+	<style>
+		html, body, #map {{ margin: 0; width: 100%; height: 100%; }}
+	</style>
+
+	<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@maplibre/maplibre-gl-leaflet@0.1.4/leaflet-maplibre-gl.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+	<script src="org-locations.js"></script>
+</head>
+<body>
+	<div id="map"></div>
+	<script type="text/javascript">
+		var map = L.map('map', {{maxZoom: 18}});
+		L.maplibreGL({{
+			style: '{STYLE_URL}'
+		}}).addTo(map);
+
+		var markers = L.markerClusterGroup({{
+			showCoverageOnHover: false,
+			maxClusterRadius: 15
+		}});
+		for (var i = 0; i < addressPoints.length; i++) {{
+			var a = addressPoints[i];
+			var marker = L.marker(L.latLng(a[1], a[2]), {{ title: a[0] }});
+			marker.bindPopup(a[0]);
+			markers.addLayer(marker);
+		}}
+		map.addLayer(markers);
+		// Fit all talks (Hawaii to China) in the view
+		map.fitBounds(markers.getBounds(), {{padding: [30, 30]}});
+	</script>
+</body>
+</html>
+"""
 map_path.write_text(html, encoding="utf-8")
